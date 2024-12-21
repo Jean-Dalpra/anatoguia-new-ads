@@ -1,0 +1,1280 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+
+    padding: 0;
+    margin: 0;
+    cursor: url(./imagens/my-mouse-pointerindex.cur), auto;
+}
+
+*::selection {
+    background-color: #8ec554;
+    color: rgb(250, 250, 250);
+}
+
+a {
+    cursor: url(./imagens/my-mouse-pointerindexpointer.cur), pointer;
+}
+
+p {
+    cursor: url(./imagens/my-mouse-pointerpoitertext.cur), text;
+}
+
+h1 {
+    cursor: url(./imagens/my-mouse-pointerpoitertext.cur), text;
+}
+
+.imagens {
+    cursor: url(./imagens/my-mouse-pointer.indexlupa.nova.transparentev3.cur), zoom-in;
+}
+
+.sistemasfoto {
+    cursor: url(./imagens/my-mouse-pointer.indexlupa.nova.transparentev3.cur), zoom-in;
+}
+
+input {
+    cursor: url(./imagens/my-mouse-pointerpoitertext.cur), text;
+}
+
+body::-webkit-scrollbar {
+    width: 17px;
+    /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #04a31e;
+    /* color of the scroll thumb */
+    border: 1px solid #028017;
+    height: 50px;
+    /* creates padding around scroll thumb */
+}
+
+/*Botões de subir/descer o header*/
+#btn2 {
+    width: 30px;
+    position: fixed;
+    z-index: 2;
+    height: 30px;
+    font-size: 20px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #c9e3ae;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 120px;
+    border-color: #008b17;
+}
+
+#btn2:hover {
+    background-color: #00c020;
+    border-color: rgb(5, 54, 0);
+    height: 32px;
+    width: 32px;
+
+    img {
+        height: 22px;
+        width: 22px;
+    }
+
+    transition: 0.2s;
+}
+
+.btn2 {
+    width: 30px;
+    position: fixed;
+    z-index: 2;
+    height: 30px;
+    font-size: 30px;
+    border-bottom-right-radius: 18px;
+    border-color: #04a31e;
+    background-color: #d3ebbb;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.btn2cima {
+    width: 30px;
+    position: fixed;
+    z-index: 2;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 30px;
+    background-color: #d3ebbb;
+    font-size: 30px;
+    margin-top: -170px;
+    border-bottom-right-radius: 18px;
+    border-color: #04a31e;
+}
+
+.btn2 img {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+}
+
+#btn2 img {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+}
+
+.btn2cima img {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+}
+
+/*Header que aparece quando se clica no botão para manter a página estática*/
+.headerdefundo {
+    height: 170px;
+    width: 100%;
+    background-color: #c9e3ae;
+    border-radius: 2px;
+    top: 0;
+    /* Header visível */
+    display: grid;
+    transition: 1s;
+}
+
+.headerdefundo2 {
+    height: 170px;
+    width: 100%;
+    background-color: #c9e3ae;
+    border-radius: 2px;
+    top: 0;
+    /* Header visível */
+    display: grid;
+    opacity: 0%;
+    transition: 1.0s;
+    pointer-events: none;
+}
+
+.headerdefundo2 .Siste {
+    position: relative;
+    /* Torna o elemento pai um contexto de posicionamento */
+    color: #04a31e;
+    font-size: 40px;
+    margin-left: 167.5px;
+    margin-top: 7px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 38px;
+    width: 550px;
+    background-color: #ffffff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-left: 10px;
+    letter-spacing: 1px;
+    padding-top: 1px;
+    text-decoration: none;
+    z-index: 1;
+    /* Mantém o texto acima do pseudo-elemento */
+    transition: 1s;
+}
+
+.headerdefundo2 .Siste:after {
+    content: "";
+    position: absolute;
+    background-color: #008b17;
+    height: 3px;
+    width: 0;
+    left: 0;
+    /* Alinha com o início do elemento */
+    bottom: 5px;
+    /* Posiciona a linha abaixo do elemento */
+    transition: width 0.3s ease;
+    /* Adiciona uma transição suave */
+    z-index: -1;
+    /* Garante que a linha fique abaixo do texto */
+}
+
+.headerdefundo2 .Siste:hover:after {
+    width: 550px;
+    margin-left: 10px;
+}
+
+/*Menu de sistemas*/
+.headerdefundo2 ul {
+    height: 80px;
+    width: 1014px;
+    background-color: #008b17;
+    border: 2px solid #008b17;
+    border-radius: 4px;
+    margin-left: 167.5px;
+    box-shadow: 2px 2px 3px #008b17;
+    transition: 1s;
+}
+
+.headerdefundo2 ul li {
+    display: grid;
+    height: 38px;
+    width: 142.857142857px;
+    float: left;
+    background-color: #ffffff;
+    border: 1px solid #008b17;
+    transition: 1s;
+}
+
+.headerdefundo2 a {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    padding: 10px;
+    margin-top: -4px;
+    transition: 1s;
+}
+
+.headerdefundo2 a:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 6px;
+    transition: 1s;
+}
+
+.headerdefundo2 .card:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: rgb(187, 0, 0);
+    transition: 1s;
+}
+
+.headerdefundo2 .resp:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #87CEEB;
+    transition: 1s;
+}
+
+.headerdefundo2 .dige:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #FFA500;
+    transition: 1s;
+}
+
+.headerdefundo2 .nerv:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #ffd700;
+}
+
+.headerdefundo2 .endo:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #9370db;
+}
+
+.headerdefundo2 .excr:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #aa8f15;
+}
+
+.headerdefundo2 .urin:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #000080;
+}
+
+.headerdefundo2 .esqu:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: rgb(148, 148, 148);
+
+}
+
+.headerdefundo2 .musc:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #ab3130;
+
+}
+
+.headerdefundo2 .imun:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #006400;
+}
+
+.headerdefundo2 .linf:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #556B2F;
+}
+
+.headerdefundo2 .sens:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #DA70D6;
+}
+
+.headerdefundo2 .repr:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: pink;
+}
+
+.headerdefundo2 .tegu:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #f1d299;
+}
+
+.headerdefundo2 a:hover:after {
+    width: 120px;
+    margin-left: 10px;
+}
+
+/*Link para o index no header*/
+.headerdefundo .Siste {
+    position: relative;
+    /* Torna o elemento pai um contexto de posicionamento */
+    color: #04a31e;
+    font-size: 40px;
+    margin-left: 167.5px;
+    margin-top: 7px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 38px;
+    width: 550px;
+    background-color: #ffffff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-left: 10px;
+    letter-spacing: 1px;
+    padding-top: 1px;
+    text-decoration: none;
+    z-index: 1;
+    /* Mantém o texto acima do pseudo-elemento */
+}
+
+.headerdefundo .Siste:after {
+    content: "";
+    position: absolute;
+    background-color: #008b17;
+    height: 3px;
+    width: 0;
+    left: 0;
+    /* Alinha com o início do elemento */
+    bottom: 5px;
+    /* Posiciona a linha abaixo do elemento */
+    transition: width 0.3s ease;
+    /* Adiciona uma transição suave */
+    z-index: -1;
+    /* Garante que a linha fique abaixo do texto */
+}
+
+.headerdefundo .Siste:hover:after {
+    width: 550px;
+    margin-left: 10px;
+}
+
+/*Menu de sistemas*/
+.headerdefundo ul {
+    height: 80px;
+    width: 1014px;
+    background-color: #008b17;
+    border: 2px solid #008b17;
+    border-radius: 4px;
+    margin-left: 167.5px;
+    box-shadow: 2px 2px 3px #008b17;
+}
+
+.headerdefundo ul li {
+    display: grid;
+    height: 38px;
+    width: 142.857142857px;
+    float: left;
+    background-color: #ffffff;
+    border: 1px solid #008b17;
+}
+
+.headerdefundo a {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    padding: 10px;
+    margin-top: -4px;
+}
+
+.headerdefundo a:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 6px;
+    transition: 0.3s;
+}
+
+.headerdefundo .card:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: rgb(187, 0, 0);
+}
+
+.headerdefundo .resp:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #87CEEB;
+}
+
+.headerdefundo .dige:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #FFA500;
+}
+
+.headerdefundo .nerv:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #ffd700;
+}
+
+.headerdefundo .endo:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #9370db;
+}
+
+.headerdefundo .excr:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #aa8f15;
+}
+
+.headerdefundo .urin:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #000080;
+}
+
+.headerdefundo .esqu:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: rgb(148, 148, 148);
+
+}
+
+.headerdefundo .musc:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #ab3130;
+
+}
+
+.headerdefundo .imun:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #006400;
+}
+
+.headerdefundo .linf:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #556B2F;
+}
+
+.headerdefundo .sens:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #DA70D6;
+}
+
+.headerdefundo .repr:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: pink;
+}
+
+.headerdefundo .tegu:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #f1d299;
+}
+
+.headerdefundo a:hover:after {
+    width: 120px;
+    margin-left: 10px;
+}
+
+/* Estilo inicial do header */
+.header {
+    height: 170px;
+    width: 100%;
+    background-color: #c9e3ae;
+    border-radius: 2px;
+    position: fixed;
+    top: 0;
+    /* Header visível */
+    transition: top 1s ease, height 0.5s ease;
+    display: grid;
+}
+
+/* Estilo do header minimizado */
+.header2 {
+    height: 170px;
+    width: 100%;
+    background-color: #c9e3ae;
+    border-radius: 2px;
+    position: fixed;
+    top: -180px;
+    /* Header fora de vista */
+    transition: top 1s ease, height 0.5s ease;
+    /* Igual ao .header */
+    display: grid;
+}
+
+/*Link para o index no header*/
+header .Siste {
+    position: relative;
+    /* Torna o elemento pai um contexto de posicionamento */
+    color: #04a31e;
+    font-size: 40px;
+    margin-left: 167.5px;
+    margin-top: 7px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 38px;
+    width: 550px;
+    background-color: #ffffff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    padding-left: 10px;
+    letter-spacing: 1px;
+    padding-top: 1px;
+    text-decoration: none;
+    z-index: 1;
+    /* Mantém o texto acima do pseudo-elemento */
+}
+
+header .Siste:after {
+    content: "";
+    position: absolute;
+    background-color: #008b17;
+    height: 3px;
+    width: 0;
+    left: 0;
+    /* Alinha com o início do elemento */
+    bottom: 5px;
+    /* Posiciona a linha abaixo do elemento */
+    transition: width 0.3s ease;
+    /* Adiciona uma transição suave */
+    z-index: -1;
+    /* Garante que a linha fique abaixo do texto */
+}
+
+header .Siste:hover:after {
+    width: 550px;
+    margin-left: 10px;
+}
+
+/*Menu de sistemas*/
+header ul {
+    height: 80px;
+    width: 1014px;
+    background-color: #008b17;
+    border: 2px solid #008b17;
+    border-radius: 4px;
+    margin-left: 167.5px;
+    box-shadow: 2px 2px 3px #008b17;
+}
+
+header ul li {
+    display: grid;
+    height: 38px;
+    width: 142.857142857px;
+    float: left;
+    background-color: #ffffff;
+    border: 1px solid #008b17;
+}
+
+header a {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #000000;
+    text-align: center;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    padding: 10px;
+    margin-top: -4px;
+}
+
+header a:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 6px;
+    transition: 0.3s;
+}
+
+header .card:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: rgb(187, 0, 0);
+}
+
+header .resp:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #87CEEB;
+}
+
+header .dige:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #FFA500;
+}
+
+header .nerv:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #ffd700;
+}
+
+header .endo:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #9370db;
+}
+
+header .excr:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #aa8f15;
+}
+
+header .urin:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #000080;
+}
+
+header .esqu:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: rgb(148, 148, 148);
+
+}
+
+header .musc:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #ab3130;
+
+}
+
+header .imun:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #006400;
+}
+
+header .linf:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #556B2F;
+}
+
+header .sens:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #DA70D6;
+}
+
+header .repr:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: pink;
+}
+
+header .tegu:hover:after {
+    width: 120px;
+    margin-left: 10px;
+    background-color: #f1d299;
+}
+
+header a:hover:after {
+    width: 120px;
+    margin-left: 10px;
+}
+
+/*maior parte do site e maindepois, para quando o botão ser apertado o site permanecer estático*/
+.main {
+    display: grid;
+    height: 8350px;
+    background-color: rgb(233, 235, 235);
+    width: 100%;
+}
+
+.maindepois {
+    display: grid;
+    height: 7600px;
+    background-color: rgb(233, 235, 235);
+    width: 1349px;
+    margin-top: -170px;
+}
+
+/*descrição da feira, link pros githubs*/
+footer {
+    height: 450px;
+    background-color: #c9e3ae;
+    display: grid;
+}
+
+footer a p {
+    cursor: url(./imagens/my-mouse-pointerindexpointer.cur), pointer;
+}
+
+footer img {
+    height: 100px;
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+footer h1 {
+    font-size: large;
+    margin-left: 150px;
+    margin-top: 50px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer h2 {
+    font-size: large;
+    margin-left: 150px;
+    margin-top: 50px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer h3 {
+    font-size: large;
+    margin-left: 150px;
+    margin-top: 50px;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer ul li {
+    margin-left: 100px;
+    margin-top: 0px;
+}
+
+#pessoas {
+    text-align: left;
+    color: white;
+    margin-top: 20px;
+    text-decoration: underline white;
+}
+
+.integrantes {
+    height: 400px;
+    position: absolute;
+    text-align: left;
+    width: 33.3333333%;
+}
+
+.fimagem {
+    height: 400px;
+    float: left;
+    margin-left: 400px;
+    margin-top: -105px;
+    width: 33.3333333%;
+}
+
+.referencias {
+    position: absolute;
+    margin-left: 800px;
+    width: 33.3333333%;
+    text-align: left;
+}
+
+#supa {
+    text-align: left;
+    margin-right: 30px;
+    color: white;
+    margin-top: 21px;
+    text-decoration: underline white;
+}
+
+#textos {
+    text-align: right;
+    color: white;
+    text-decoration: underline white;
+    margin-top: 20px;
+
+}
+
+/*Dentro da main*/
+.base {
+    width: 1000px;
+    height: 8250px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-left: 174.5px;
+    margin-top: 20px;
+    box-shadow: 10px 10px 8px 10px #888888;
+}
+
+/*Foto de todos os sistemas*/
+.sistemasfoto {
+    height: 500px;
+    width: 1000px;
+    margin-top: 30px;
+}
+
+/*primeiro texto do site*/
+.base .textoinicial {
+    font-size: 26px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 120px;
+    width: 1000px;
+    margin-left: 10px;
+    margin-top: 35px;
+}
+
+/*apresenta todos os sistemas, debaixo da imagem dos sistemas*/
+main .introducao {
+    color: #222222;
+    font-size: 48px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 50px;
+    background-color: #ffffff;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/*cada uma das imagens de cada sistema*/
+.imagens {
+    height: 400px;
+    width: 400px;
+    display: grid;
+    margin-left: 20px;
+    box-shadow: 0px 0px 3px 1px black;
+    margin-top: 100px;
+    z-index: 1;
+}
+
+/*tudo que acompanha as imagens de cada sistema*/
+.basedasimagens {
+    display: grid;
+    height: 350px;
+    width: 560px;
+    margin-top: -375px;
+    margin-left: 422px;
+    background-color: #e4e4e4;
+}
+
+.basedasimagens h1 {
+    font-size: 27px;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 6px;
+    height: 30px;
+    width: 300px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: #c9e3ae;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.basedasimagens h1:hover {
+    font-size: 28px;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 30px;
+    width: 310px;
+    padding: 9px;
+    padding-top: 3px;
+    padding-bottom: -9px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    transition: 0.3s;
+}
+
+.basedasimagens p {
+    height: 200px;
+    width: 500px;
+    margin-left: 20px;
+    font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.basedasimagens p:hover {
+    height: 200px;
+    width: 500px;
+    font-size: 20.5px;
+    transition: 0.2s;
+}
+
+.basedasimagens a {
+    height: 30px;
+    width: 370px;
+    margin-top: -50px;
+    margin-left: 20px;
+    color: #000000;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+    background-color: #c9e3ae;
+    padding-left: 15px;
+    padding-top: 3px;
+}
+
+.basedasimagens a:hover {
+    height: 31px;
+    width: 400px;
+    font-size: 23px;
+    transition: 0.2s;
+}
+
+.header-search {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 820px;
+    margin-top: -79px;
+}
+
+.header-search input {
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #04a31e;
+    border-radius: 8px;
+    height: 36px;
+    width: 200px;
+    outline: none;
+}
+
+.header-search input::placeholder {
+    color: #a0a0a0;
+    font-size: 18px;
+}
+
+/* Caixa de sugestões */
+.suggestions-box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 212px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 9999;
+    display: none;
+    position: absolute;
+    /* Altere para 'absolute' para que fique dentro do container */
+    top: 60px;
+    /* Ajuste conforme necessário */
+}
+
+/* Torna a suggestions-box visível ao fazer uma busca */
+#search-input:focus+#suggestions,
+#search-input:not(:placeholder-shown)+#suggestions {
+    display: block;
+    /* Exibe quando o input é focado ou preenchido */
+}
+
+/* Estilo para a barra de rolagem */
+.suggestions-box::-webkit-scrollbar {
+    width: 15px;
+    /* Largura da barra */
+    background-color: #f0f0f0;
+    /* Cor de fundo */
+    border-radius: 8px;
+}
+
+.suggestions-box::-webkit-scrollbar-thumb {
+    background-color: #04a31e;
+    /* Cor do "thumb" */
+    border-radius: 8px;
+    border: 1px solid #028017;
+    /* Borda do "thumb" */
+}
+
+.suggestions-box::-webkit-scrollbar-thumb:hover {
+    background-color: #028017;
+    /* Cor ao passar o mouse */
+}
+
+/* Estilo dos links */
+.suggestions-box a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+}
+
+.suggestions-box a:hover {
+    background-color: #04a31e;
+    color: white;
+}
+
+.suggestion-link.highlight {
+    background-color: #04a31e;
+    color: white;
+    /* Destaca a sugestão */
+}
+
+.suggestion-link.highlight,
+.suggestion-item.highlight {
+    background-color: #04a31e;
+    color: white;
+    /* Destaca a sugestão */
+}
+
+.header-search input.highlight {
+    background-color: #e0e0e0;
+    /* Por exemplo, destaque sutil no input */
+}
+
+/* Caixa de sugestões */
+.suggestions-branco {
+    background-color: #ffffff;
+    border-radius: 8px;
+    width: 212px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 9999;
+    display: none;
+    position: absolute;
+    /* Altere para 'absolute' para que fique dentro do container */
+    top: 60px;
+    /* Ajuste conforme necessário */
+}
+
+/* Torna a suggestions-box visível ao fazer uma busca */
+#search-input-header:focus+#suggestions-header,
+#search-input-header:not(:placeholder-shown)+#suggestions-header {
+    display: block;
+}
+
+#search-input-branco:focus+#suggestions-branco,
+#search-input-branco:not(:placeholder-shown)+#suggestions-branco {
+    display: block;
+}
+
+/* Estilo para a barra de rolagem */
+.suggestions-branco::-webkit-scrollbar {
+    width: 15px;
+    /* Largura da barra */
+    background-color: #f0f0f0;
+    /* Cor de fundo */
+    border-radius: 8px;
+}
+
+.suggestions-branco::-webkit-scrollbar-thumb {
+    background-color: #04a31e;
+    /* Cor do "thumb" */
+    border-radius: 8px;
+    border: 1px solid #028017;
+    /* Borda do "thumb" */
+}
+
+.suggestions-branco::-webkit-scrollbar-thumb:hover {
+    background-color: #028017;
+    /* Cor ao passar o mouse */
+}
+
+/* Estilo dos links */
+.suggestions-branco a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+}
+
+.suggestions-branco a:hover {
+    background-color: #04a31e;
+    color: white;
+}
+
+.suggestion-item.highlight {
+    background-color: #04a31e;
+    color: white;
+    /* Destaca a sugestão */
+}
+
+#search-input-branco:focus+#suggestions-branco,
+#search-input-branco:not(:placeholder-shown)+#suggestions-branco {
+    display: block;
+}
+
+.suggestion-item {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+.suggestion-item:hover {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 16px;
+    background-color: #04a31e;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: white;
+}
+
+.jeanfoto {
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.jeannome {
+    margin-left: 78px;
+    font-size: 20px;
+    margin-top: -51px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.jeanembaixo {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 78px;
+}
+
+td {
+    border: 2px solid #b6b6b6;
+    word-wrap: inherit;
+    font-size: 20px;
+    cursor: url(./imagens/my-mouse-pointerpoitertext.cur), text;
+}
+
+td strong {
+    cursor: url(./imagens/my-mouse-pointerpoitertext.cur), text;
+}
+
+tr {
+    border: 1px solid #04a31e;
+    word-wrap: inherit;
+}
+
+table {
+    margin-top: 50px;
+    height: 300px;
+    width: 950px;
+    border-spacing: 0px;
+    margin-left: 25px;
+    border-collapse: collapse;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #eaf5de;
+}
+
+table td {
+    padding: 5px;
+}
+
+.FunçõesdosSistemasdoCorpoHumano {
+    color: #222222;
+    font-size: 46px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.anatoguia {
+    margin-top: -40px;
+    font-size: 54px;
+    letter-spacing: 3px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #f7f7f7;
+    text-shadow: -3px 2px #04a31e;
+    padding-top: 3px;
+    padding-bottom: 19px;
+    padding-left: 10px;
+    margin-left: 326px;
+    padding-right: 2px;
+    border-radius: 9px;
+    border-top-left-radius: 0px;
+    background-color: #8ec554;
+    height: 50px;
+    width: 345px;
+}
+
+.selected-text {
+    background-color: #ffff99;
+    /* Leve tom de destaque */
+}
+
+.custom-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button.active {
+    background-color: #28a745;
+    /* Verde quando ativado */
+}
+
+.custom-button.active:hover {
+    background-color: #24923d;
+    /* Verde quando ativado */
+}
+.leitordetextoativate:hover{
+    #leitordetexto {
+        opacity: 100%;
+        background-color: #000000;
+    }
+}
+.custom-button:hover {
+    background-color: #0056b3;
+}
+
+#activateButton {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    margin-left: 1123px;
+    margin-top: 46px;
+    border-radius: 40%;
+}
+
+#activateButton img {
+    height: 48px;
+    width: 48px;
+    margin-left: -24px;
+    margin-top: -13px;
+    pointer-events: none;
+}
+
+#leitordetexto {
+    height: 60px;
+    width: 120px;
+    border-color: #0056b3;
+    opacity: 10%;
+    border: 2px solid;
+}
